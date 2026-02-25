@@ -213,7 +213,7 @@ i.author a:hover {
 	float: left;
 	margin-right: 1em;
 	border-radius: 50%;
-  max-width: 100px;\
+  max-width: 100px;
   max-height: 100px;}
 
 .member-summary img:hover {
@@ -271,7 +271,7 @@ ul.pagination a.active, ul.pagination a:hover {
   font-family: "icons";
   font-style: normal;
   font-weight: normal;
-  speak: none;
+  speak-as: none;
  
   display: inline-block;
   text-decoration: inherit;

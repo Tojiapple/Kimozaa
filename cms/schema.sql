@@ -1,5 +1,5 @@
 CREATE TABLE `article` (
-  `id` int(11) NOT NULL,
+  `article_id` int(11) NOT NULL,
   `title` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL,
   `summary` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE `article` (
   `published` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `article` (`id`, `title`, `summary`, `content`, `created`, `category_id`, `member_id`, `image_id`, `published`) VALUES
+INSERT INTO `article` (`article_id`, `title`, `summary`, `content`, `created`, `category_id`, `member_id`, `image_id`, `published`) VALUES
 (1, 'Ethereal Forest', 'Digital painting of a mystical forest', 'Ethereal Forest is a digital painting that captures the glow and magic of a mystical woodland. The piece uses vibrant light effects and soft brush strokes to create a dreamlike atmosphere.', '2026-02-23 10:00:00', 1, 1, 1, 1),
 (2, 'Neon Cityscape', 'Cyberpunk city in digital art style', 'Neon Cityscape depicts a bustling futuristic metropolis at night, rendered with neon lights and reflective surfaces. The work explores urban density and vibrant color contrasts.', '2026-02-23 10:30:00', 1, 2, 2, 1),
 (3, 'Space Travel', 'Futuristic spaceship in a nebula', 'This digital painting shows a spaceship traveling through a colorful nebula. The use of dynamic lighting and cosmic textures creates a sense of speed and vastness.', '2026-02-23 11:00:00', 1, 1, 3, 1),
@@ -26,37 +26,37 @@ INSERT INTO `article` (`id`, `title`, `summary`, `content`, `created`, `category
 (13, 'Vector Nature', 'Flat vector digital landscape', 'Vector Nature is a digital illustration using clean geometric shapes and flat colors to depict mountains, rivers, and forests. It highlights scalability and crisp visual clarity.', '2026-02-23 16:00:00', 2, 2, 13, 1),
 (14, 'Sci-Fi Interior', 'Futuristic room digital render', 'Sci-Fi Interior is a digital painting of a high-tech room with neon accents and advanced furniture design. The piece blends architectural visualization with creative digital art.', '2026-02-23 16:30:00', 2, 1, 14, 1),
 (15, 'Motion Graphics Sample', 'Animated digital art showcase', 'Motion Graphics Sample demonstrates the application of motion design in digital art products. Smooth transitions and liquid animation techniques are featured to enhance visual storytelling.', '2026-02-23 17:00:00', 3, 2, 15, 1),
-(16, 'Digital Logo Pack', 'Brand identity design', 'Digital Logo Pack contains modern logo designs optimized for digital platforms. Each logo combines vector precision with aesthetic considerations for branding consistency.', '2026-02-23 17:30:00', 3, 3, 16, 1),
+(16, 'Digital Logo Pack', 'Brand identity design', 'Digital Logo Pack contains modern logo designs optimized for digital platforms. Each logo combines vector precision with aesthetic considerations for branding consistency.', '2026-02-23 17:30:00', 4, 3, 16, 1),
 (17, 'Pixel Art Character', 'Retro pixel design for games', 'Pixel Art Character is designed for game assets and animations. Its low-resolution charm brings nostalgia while remaining compatible with modern game engines.', '2026-02-23 18:00:00', 2, 1, 17, 1),
-(18, 'Social Media Kit', 'Template pack for creatives', 'Social Media Kit provides animated and static templates for promoting digital art. It includes customizable layouts, typography, and effects for maximum engagement.', '2026-02-23 18:30:00', 3, 2, 18, 1),
+(18, 'Social Media Kit', 'Template pack for creatives', 'Social Media Kit provides animated and static templates for promoting digital art. It includes customizable layouts, typography, and effects for maximum engagement.', '2026-02-23 18:30:00', 4, 2, 18, 1),
 (19, 'Digital Landscape Noir', 'Moody black-and-white digital art', 'Digital Landscape Noir explores contrast, shadows, and textures in monochromatic digital paintings. The series conveys mood and atmosphere through composition and lighting.', '2026-02-23 19:00:00', 1, 3, 19, 1),
-(20, 'Interactive E-Book', 'Digital book layout for tablets', 'Interactive E-Book offers engaging layouts for digital reading. Features include embedded media, interactive maps, and responsive design to suit various devices.', '2026-02-23 19:30:00', 3, 1, 20, 1),
+(20, 'Interactive E-Book', 'Digital book layout for tablets', 'Interactive E-Book offers engaging layouts for digital reading. Features include embedded media, interactive maps, and responsive design to suit various devices.', '2026-02-23 19:30:00', 4, 1, 20, 1),
 (21, 'Augmented Avatar', '3D character for AR/VR', 'Augmented Avatar is a stylized 3D character designed for virtual reality and augmented reality applications. Its design prioritizes approachability and expressive motion.', '2026-02-23 20:00:00', 3, 2, 21, 1),
 (22, 'Liquid Animation', 'Web-based digital motion art', 'Liquid Animation is a set of smooth, organic movements rendered digitally for web interfaces. It uses lightweight animation files optimized for fast-loading pages.', '2026-02-23 20:30:00', 3, 3, 22, 1),
-(23, 'Smart Dashboard', 'UI design for IoT devices', 'Smart Dashboard is a digital product for managing smart home devices. Its card-based design allows users to monitor energy and data efficiently in an interactive interface.', '2026-02-23 21:00:00', 2, 1, 23, 1),
-(24, 'Fantasy Illustration', 'Whimsical dreamlike digital painting', 'Fantasy Illustration combines vivid colors, surreal landscapes, and imaginative characters to create an immersive digital art experience, suitable for prints or digital showcases.', '2026-02-23 21:30:00', 1, 2, 24, 1);
+(23, 'Smart Dashboard', 'UI design for IoT devices', 'Smart Dashboard is a digital product for managing smart home devices. Its card-based design allows users to monitor energy and data efficiently in an interactive interface.', '2026-02-23 21:00:00', 4, 1, 23, 1),
+(24, 'Fantasy Illustration', 'Whimsical dreamlike digital painting', 'Fantasy Illustration combines vivid colors, surreal landscapes, and imaginative characters to create an immersive digital art experience, suitable for prints or digital showcases.', '2026-02-23 21:30:00', 3, 2, 24, 1);
 
 CREATE TABLE `category` (
-  `id` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `name` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   `navigation` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `category` (`id`, `name`, `description`, `navigation`) VALUES
-(1, 'Print', 'Inspiring graphic design', 1),
-(2, 'Digital', 'Powerful pixels', 1),
-(3, 'Illustration', 'Hand-drawn visual storytelling', 1),
-(4, 'Photography', 'Capturing every moment', 1);
+INSERT INTO `category` (`category_id`, `name`, `description`, `navigation`) VALUES
+(1, 'Digital Paintings', 'Stunning digital art and graphics', 1),
+(2, 'Interactive Design', 'Motion, animation, and interactive experiences', 1),
+(3, 'Creative Products', '3D design, UI kits, and digital products', 1),
+(4, 'Digital Assets', 'Templates and reusable creative resources', 1);
 
 
 CREATE TABLE `image` (
-  `id` int(11) NOT NULL,
+  `image_id` int(11) NOT NULL,
   `file` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   `alt` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `image` (`id`, `file`, `alt`) VALUES
+INSERT INTO `image` (`image_id`, `file`, `alt`) VALUES
 (1, 'ethereal-forest.jpg', 'Digital painting of a mystical forest with glowing lights'),
 (2, 'neon-cityscape.jpg', 'Vibrant cyberpunk city at night in digital art style'),
 (3, 'space-travel-art.jpg', 'Futuristic spaceship flying through a colorful nebula'),
@@ -83,7 +83,7 @@ INSERT INTO `image` (`id`, `file`, `alt`) VALUES
 (24, 'fantasy-illustration.jpg', 'Whimsical digital painting of a dreamlike scene');
 
 CREATE TABLE `member` (
-  `id` int(11) NOT NULL,
+  `member_id` int(11) NOT NULL,
   `forename` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   `surname` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(254) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -92,15 +92,15 @@ CREATE TABLE `member` (
   `picture` varchar(254) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `member` (`id`, `forename`, `surname`, `email`, `password`, `joined`, `picture`) VALUES
-(1, 'Earl', 'Dizon', 'earl@movie.link', 'pass-1234', '2021-01-26 12:04:23', 'earl.jpg'),
-(2, 'Sean', 'Matias', 'sean@movie.link', 'pass-5678', '2021-01-26 12:15:18', 'sean.jpg'),
-(3, 'Brent', 'Balajadia', 'brent@movie.link', 'pass-9012', '2021-02-12 10:53:47', 'brent.jpg');
+INSERT INTO `member` (`member_id`, `forename`, `surname`, `email`, `password`, `joined`, `picture`) VALUES
+(1, 'Earl', 'Dizon', 'earl@gmail.com', 'adobo-2006!', '2022-01-26 12:04:23', 'earl.jpg'),
+(2, 'Sean', 'Matias', 'sean@gmail.com', 'ugugaga-5678', '2022-01-26 12:15:18', 'sean.jpg'),
+(3, 'Brent', 'Balajadia', 'brent@gmail.com', 'sinigang-9012', '2022-02-12 10:53:47', 'brent.jpg');
 
 -- Indexes for table `article`
 --
 ALTER TABLE `article`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`article_id`),
   ADD UNIQUE KEY `title` (`title`),
   ADD KEY `category_id` (`category_id`),
   ADD KEY `author_id` (`member_id`),
@@ -110,20 +110,20 @@ ALTER TABLE `article`
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`category_id`),
   ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Indexes for table `image`
 --
 ALTER TABLE `image`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`image_id`);
 
 --
 -- Indexes for table `member`
 --
 ALTER TABLE `member`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`member_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -133,25 +133,25 @@ ALTER TABLE `member`
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `article_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `member_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -161,6 +161,6 @@ ALTER TABLE `member`
 -- Constraints for table `article`
 --
 ALTER TABLE `article`
-  ADD CONSTRAINT `category_exists` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
-  ADD CONSTRAINT `image_exists` FOREIGN KEY (`image_id`) REFERENCES `image` (`id`),
-  ADD CONSTRAINT `member_exists` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`);
+  ADD CONSTRAINT `category_exists` FOREIGN KEY (`category_id`) REFERENCES `category` (`category_id`),
+  ADD CONSTRAINT `image_exists` FOREIGN KEY (`image_id`) REFERENCES `image` (`image_id`),
+  ADD CONSTRAINT `member_exists` FOREIGN KEY (`member_id`) REFERENCES `member` (`member_id`);

@@ -1,6 +1,6 @@
 <?php
-require '../cms/includes/database-connection.php';
-require '../cms/includes/functions.php';
+require __DIR__ . '/../includes/database-connection.php';
+require __DIR__ . '/../includes/functions.php';   
 $sql       = "SELECT forename, surname 
                 FROM member;";
 $statement = $pdo->query($sql);

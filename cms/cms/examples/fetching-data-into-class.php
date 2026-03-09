@@ -1,6 +1,6 @@
 <?php
-require '../cms/includes/database-connection.php';
-require '../cms/includes/functions.php';
+require __DIR__ . '/cms/includes/database-connection.php';
+require __DIR__ . '/cms/includes/functions.php';   
 require 'classes/Member.php';
 $sql = "SELECT forename, surname
           FROM member

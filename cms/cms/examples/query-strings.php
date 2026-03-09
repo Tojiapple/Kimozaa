@@ -1,6 +1,6 @@
 <?php
-require '../cms/includes/database-connection.php';
-require '../cms/includes/functions.php';
+require __DIR__ . '/cms/includes/database-connection.php';
+require __DIR__ . '/cms/includes/functions.php';   
 
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 if (!$id) {                            // If no id

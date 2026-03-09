@@ -1,6 +1,6 @@
 <?php
-require '../cms/includes/database-connection.php';             // Create PDO object
-require '../cms/includes/functions.php';                       // Functions 
+require __DIR__ . '/cms/includes/database-connection.php';
+require __DIR__ . '/cms/includes/functions.php';                      // Functions 
 $sql       = "SELECT id, forename, surname, joined, picture FROM member;"; // SQL
 $statement = $pdo->query($sql);                                // Run query
 $members   = $statement->fetchAll();                           // Get data

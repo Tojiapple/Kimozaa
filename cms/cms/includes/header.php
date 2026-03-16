@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="cms/css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
   </head>
   <body>
     <header>
       <div class="container">
         <a class="skip-link" href="#content">Skip to content</a>
         <div class="logo">
-          <a href="index.php"><img src="cms/img/header.png" alt="Kimozaa"></a>
+          <a href="index.php"><img src="img/kimozalogo.png" alt="Kimozaa"></a>
         </div>
         <nav>
           <button id="toggle-navigation" aria-expanded="false">
@@ -30,8 +30,8 @@
             <?php } ?>
             <li><a href="search.php">
               <span class="icon-search"></span><span class="search-text">Search</span>
-            </a></li>
+            </a></li>Signing in to github.com...
           </ul>
         </nav>
-      </div><!-- /.container -->
+      </div>
     </header>
